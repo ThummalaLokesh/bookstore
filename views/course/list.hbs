@@ -1,0 +1,32 @@
+<div>
+<a class="btn btn-secondary" href="/course"><i class="fa fa-plus"></i> Create New</a> 
+<a class="btn btn-secondary" href="views/login.pug"><i class="fa fa-plus"></i> Login</a> 
+ 
+ 
+<h3 align="center">Books List</h3>
+</div>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Book Name</th>
+<th>Book ISBN</th>
+<th>Book Author</th>
+<th>Book Price</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+{{#each list}}
+<tr align="center">
+<td>{{this.bookName}}</td>
+<td>{{this.bookISBN}}</td>
+<td>{{this.bookAuthor}}</td>
+<td>{{this.bookPrice}}</td>
+<td>
+<a href="/course/{{this._id}}"> Edit </a>
+<a href="/course/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"> Delete </a>
+</td>
+</tr>
+{{/each}}
+</tbody>
+</table>

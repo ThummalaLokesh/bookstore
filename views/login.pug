@@ -1,0 +1,36 @@
+doctype html
+
+html
+  
+    include ./partials/header
+    title #{title}
+
+<!-- ................Login page................... -->
+    #loginPage
+        block content
+            .container
+                form(method="POST")
+                    h1 Login
+                    p Please fill in this Login form.
+                    hr
+                    label(for='email')
+                        b Username
+                    input(type='text' placeholder='Enter Username' name='username' required='')
+                    label(for='psw')
+                        b Password
+                    input(type='password' placeholder='Enter Password' name='password' required='')
+                    
+                    hr
+                    
+                    button.registerbtn(type='submit') Login
+                    .container.signin
+                    p
+                        | New User? 
+                        a(href='/register') Sign Up
+                        | 
+                    
+            
+
+    <!-- ................FOOTER SECTION................... -->
+    #footer
+        p &copy; 2019 | All Right Reserved
