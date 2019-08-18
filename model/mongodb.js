@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
  
-mongoose.connect('mongodb://localhost:27017/BookStore', {useNewUrlParser: true}, (err) => {
+mongoose.connect('mongodb+srv://book:book@cluster0-ulhuq.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true}, (err) => {
 if (!err) {
 console.log('Successfully Established Connection with MongoDB')
 }
